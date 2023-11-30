@@ -3,7 +3,7 @@
   become: yes
   become_user: decide
   git:
-    repo: 'https://github.com/wadobo/decide.git'
+    repo: 'https://github.com/AntonioRodriguezRuiz/EGC-2324-1730-turno41-antrodrui2.git'
     dest: /home/decide/decide
     version: master
 
