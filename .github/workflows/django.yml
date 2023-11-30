@@ -5,12 +5,14 @@ on: [push]
 
 jobs:
   build:
-
+    strategy:
+      matrix:
+        postgres: ['14.9','15.0']
     runs-on: ubuntu-latest
 
     services:
       postgres:
-        image: postgres:14.9
+        image: postgres:${{matrix.postgres}}
         env:
           POSTGRES_USER: decide
           POSTGRES_PASSWORD: decide
